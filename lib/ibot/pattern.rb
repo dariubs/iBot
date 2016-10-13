@@ -3,15 +3,15 @@
 # IBot class : pattern
 class IBot
   def add_pattern(group, pattern)
-    @group[group][:pattern].push pattern if @group.key? group
+    @group[group]['pattern'].push pattern if @group.key? group
   end
 
   def list_patterns(group)
-    @group[group][:pattern]
+    @group[group]['pattern']
   end
 
   def match?(group, text)
-    re = Regexp.union(@group[group][:pattern])
+    re = Regexp.union(@group[group]['pattern'])
 
     if text.match(re)
       true
@@ -20,7 +20,7 @@ class IBot
     end
   end
 
-  def pattern_defined?(pattern)
+  def pattern_group(pattern)
     @group.each do |name, _|
       return name if match? name, pattern
     end

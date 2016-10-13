@@ -18,7 +18,7 @@ bot.add_response :by, 'By'
 
 loop do
   a = gets
-  b = bot.pattern_defined? a
+  b = bot.pattern_group a
 
   next if b.nil?
 

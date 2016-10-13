@@ -1,0 +1,23 @@
+{
+  "greeting":{
+    "pattern":[
+      "Hello",
+      "holla",
+      "hi"
+    ],
+    "response":[
+      "Hello :)",
+      "Hollaaa ",
+      "Hi"
+    ]
+  },
+  "goodby": {
+    "pattern":[
+      "by",
+      "goodby"
+    ],
+    "response":[
+      "Goodby!"
+    ]
+  }
+}

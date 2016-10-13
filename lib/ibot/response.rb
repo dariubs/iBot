@@ -3,14 +3,14 @@
 # IBot class : response
 class IBot
   def add_response(group, response)
-    @group[group][:response].push response if @group.key? group
+    @group[group]['response'].push response if @group.key? group
   end
 
   def list_response(group)
-    @group[group][:response]
+    @group[group]['response']
   end
 
   def response(group)
-    @group[group][:response].sample
+    @group[group]['response'].sample
   end
 end
