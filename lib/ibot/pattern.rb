@@ -10,7 +10,8 @@ class IBot
     @group[group]['pattern']
   end
 
-  def match?(group, text)
+  # Check if text match specific group
+  def match_group?(group, text)
     re = Regexp.union(@group[group]['pattern'])
 
     if text.match(re)
@@ -20,9 +21,10 @@ class IBot
     end
   end
 
-  def pattern_group(pattern)
+  # Find text group
+  def text_group(text)
     @group.each do |name, _|
-      return name if match? name, pattern
+      return name if match_group? name, text
     end
 
     nil

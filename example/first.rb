@@ -18,11 +18,11 @@ bot.add_response :by, 'By'
 
 loop do
   a = gets
-  b = bot.pattern_group a
+  b = bot.text_group a
 
   next if b.nil?
 
-  if bot.match?(b, a)
+  if bot.match_group?(b, a)
     puts bot.response b
   else
     puts b
